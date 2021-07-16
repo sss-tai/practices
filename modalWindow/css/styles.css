@@ -19,6 +19,8 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
+  /* modalの方が上に配置するように */
+  z-index: 1;
 }
 
 #modal {
@@ -31,6 +33,10 @@ body {
   right: 0;
   left: 0;
   margin: 0 auto;
+  /* 上からWindowが下りてくる */
+  transition: transform 0.4s;
+  /* modalの方が上に配置するように */
+  z-index: 2;
 }
 
 #modal > p {
