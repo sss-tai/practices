@@ -18,10 +18,22 @@ dt {
   cursor: pointer;
   /* クリックしても文字選択されない */
   user-select: none;
+  position: relative;
 }
 
 dt::before {
   content: 'Q. ';
+}
+
+dt::after {
+  content: '+';
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+dl > div.appear dt::after {
+  transform: rotate(45deg);
 }
 
 dd {
@@ -33,4 +45,10 @@ dd {
 dd::before {
   content: 'A. ';
 }
+
+dl > div.appear dd {
+  display: block;
+}
+
+
 
