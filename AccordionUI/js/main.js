@@ -6,6 +6,13 @@
   dts.forEach(dt => {
     dt.addEventListener('click', () => {
       dt.parentNode.classList.toggle('appear');
+      
+      // 開くのは1つのみに設定
+      dts.forEach(el => {
+        if (dt !== el) {
+          el.parentNode.classList.remove('appear')
+        }
+      });
     });
   });
 }
